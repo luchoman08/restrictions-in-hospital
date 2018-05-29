@@ -66,6 +66,10 @@ class Profesional from BaseObject
       {Browse [@horarios @tratamientos]}
    end
 end
+
+fun {HorariosAFranjas Horarios Tama}
+   
+
 Tratamientos = [consulta_general limpieza_dental urgencias_1_nivel]
 Horarios =  horarios(lunes: ['7:40'#'12:40' '14:00'#'18:00'] martes:['12:00'#'18:00'])
 P1 = {New Profesional init(Horarios Tratamientos)}

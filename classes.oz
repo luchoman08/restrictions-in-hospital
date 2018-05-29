@@ -36,6 +36,13 @@ P.r = 90
 {Browse X}
 
 
+class Paciente from BaseObject
+   attr
+      horarios_ocupados % array de horarios ocupados en formato string[] donde cada miembro esta en formato "hora:minutos", hora formato 24 horas
+end
+
+
+
 class Profesional from BaseObject
    attr
       horarios % franjas de horarios en cada dia: ejemplo horarios(lunes: [6#12 2#6] martes:[12#6])
@@ -66,3 +73,8 @@ local Atiende? in {P1 atiendeTratamiento(consulta_general Atiende?)} {Browse Ati
 local X in {P1 getHorarios(X)} {Browse X.lunes.1.1} end
 
 {Browse 12#4}
+
+declare Horario S1 S2
+Horario = "15:13"
+{String.token Horario &: S1 S2} 
+{Browse {String.toAtom S1}}

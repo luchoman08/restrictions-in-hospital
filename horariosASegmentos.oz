@@ -35,3 +35,5 @@ end
 {Browse {DuplaHorariosADuplaSegmentos '13:30'#'13:45' 15}}
 
 {Browse {HorarioASegmento '13:45' 15}}
+PR = 1#2
+{Browse PR.2}

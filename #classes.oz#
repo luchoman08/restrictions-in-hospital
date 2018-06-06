@@ -235,7 +235,10 @@ fun {RecordFranjasDisponibles NombresDoctores Doctores TamanioFranja}
    end
 end
 
-   
+fun {TotalTratamientosRequeridos Pacientes Tratamiento}
+   TotalRequeridos = {NewCell}
+in
+   {ForAll
 proc {AsignacionCitas Root}
    /*
    El modelo a resolver sera:
